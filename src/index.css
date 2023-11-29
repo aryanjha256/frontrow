@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --text: #1b171c;
+    --background: #e7e3e8;
+    --primary: #ab9ca3;
+    --secondary: #d7d0d0;
+    --accent: #766565;
+  }
+  .dark {
+    --text: #e7e3e8;
+    --background: #1b171c;
+    --primary: #63545b;
+    --secondary: #2f2828;
+    --accent: #9a8989;
+  }
+}
