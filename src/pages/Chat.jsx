@@ -2,12 +2,16 @@ import logout from "../assets/logout.svg";
 import user from "../assets/user.svg";
 import send from "../assets/send.svg";
 import RowPost from "../components/RowPost";
+import { signOut } from "firebase/auth";
+import auth from "../lib/auth";
 
 const Chat = () => {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex text-center font-bold text-2xl bg-secondary py-1 px-4">
-        <img src={logout} alt="logout" width={36} />
+        <button onClick={() => signOut(auth)}>
+          <img src={logout} alt="logout" width={36} />
+        </button>
         <h1 className="mx-auto">Front Row</h1>
         <img src={user} alt="user" width={36} />
       </div>

@@ -3,7 +3,7 @@ import TextField from "../components/TextField";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../lib/auth";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastic";
+import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -23,7 +23,7 @@ const Register = () => {
     <div className="flex pt-16 items-center flex-col min-h-screen">
       <img src={logo} alt="logo" width={94} />
       <h1 className="text-xl pt-8">Let's create a new account for you</h1>
-      <ToastContainer position="top-right" />
+      <Toaster />
       <div className="pt-8 space-y-4">
         <TextField
           placeholder="Enter your email address"

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../lib/auth";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastic";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,12 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const credential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(credential.user.uid);
       toast.success("Login successful");
     } catch (error) {
       toast.error(error.message);
@@ -23,7 +28,7 @@ const Login = () => {
     <div className="flex pt-16 items-center flex-col min-h-screen">
       <img src={logo} alt="logo" width={94} />
       <h1 className="text-xl pt-8">Welcome back, you have been missed</h1>
-      <ToastContainer position="top-right" />
+      <Toaster />
       <div className="pt-8 space-y-4">
         <TextField
           placeholder="Enter your email address"
