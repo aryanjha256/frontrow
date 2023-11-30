@@ -17,8 +17,8 @@ const Login = () => {
         email,
         password
       );
-      console.log(credential.user.uid);
       toast.success("Login successful");
+      toast(`Logged in as ${credential.user.email}`);
     } catch (error) {
       toast.error(error.message);
     }
