@@ -25,7 +25,7 @@ const Chat = () => {
           <RowPost />
         </div>
       </div>
-      <div className="flex justify-center items-center bg-accent py-4 px-4 space-x-2">
+      <div className="flex justify-center items-center bg-primary py-4 px-4 space-x-2">
         <input
           type="text"
           placeholder="Speak your mind..."
