@@ -3,7 +3,7 @@ import TextField from "../components/TextField";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../lib/auth";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toast";
+import { toast, ToastContainer } from "react-toastic";
 import { Link } from "react-router-dom";
 
 const Register = () => {

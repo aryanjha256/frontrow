@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../lib/auth";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toast";
+import { toast, ToastContainer } from "react-toastic";
 
 const Login = () => {
   const [email, setEmail] = useState("");
